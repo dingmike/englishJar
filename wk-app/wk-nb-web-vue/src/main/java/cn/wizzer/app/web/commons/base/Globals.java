@@ -25,9 +25,9 @@ public class Globals {
     //项目目录
     public static String AppBase = "";
     //项目名称
-    public static String AppName = "NutzWk 开发框架";
+    public static String AppName = "EnglishAbility";
     //项目短名称
-    public static String AppShrotName = "NutzWk";
+    public static String AppShrotName = "EAManager";
     //项目域名
     public static String AppDomain = "http://127.0.0.1";
     //文件上传路径
