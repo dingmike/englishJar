@@ -31,7 +31,7 @@ public class WxPayBackController {
 
     @At
     @Ok("raw")
-    @AdaptBy(type = VoidAdaptor.class)
+    @AdaptBy(type = VoidAdaptor.class) // HTTP 参数适配方式
     public String sendNotify(Reader reader) throws IOException {
         NutMap res = Xmls.xmlToMap(Streams.readAndClose(reader));
         log.debug("res::" + Json.toJson(res));

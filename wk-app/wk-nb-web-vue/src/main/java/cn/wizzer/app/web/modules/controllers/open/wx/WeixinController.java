@@ -30,8 +30,8 @@ public class WeixinController {
         Wxs.enableDevMode(); // 开启debug模式,这样就会把接收和发送的内容统统打印,方便查看
     }
 
-    @At({"/api", "/api/?"})
-    @Fail("http:200")
+    @At({"/api", "/api/?"}) //入口函数对于的URL 可以声明多个URL{"",""}
+    @Fail("http:200") // 失败视图
     public View msgIn(String key, HttpServletRequest req) throws IOException {
         return Wxs.handle(wxHandler, req, key);
     }

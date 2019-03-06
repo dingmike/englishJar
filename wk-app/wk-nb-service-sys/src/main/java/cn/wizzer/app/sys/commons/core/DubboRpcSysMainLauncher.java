@@ -52,12 +52,12 @@ public class DubboRpcSysMainLauncher {
             //初始化配置表
             Sys_config conf = new Sys_config();
             conf.setConfigKey("AppName");
-            conf.setConfigValue("NutzWk-NB");
+            conf.setConfigValue("EnglishAbility");
             conf.setNote("系统名称");
             dao.insert(conf);
             conf = new Sys_config();
             conf.setConfigKey("AppShrotName");
-            conf.setConfigValue("NutzWk");
+            conf.setConfigValue("EASystem");
             conf.setNote("系统短名称");
             dao.insert(conf);
             conf = new Sys_config();
@@ -91,12 +91,12 @@ public class DubboRpcSysMainLauncher {
             unit.setName("系统管理");
             unit.setAliasName("System");
             unit.setLocation(0);
-            unit.setAddress("银河-太阳系-地球");
-            unit.setEmail("wizzer@qq.com");
+            unit.setAddress("北京");
+            unit.setEmail("2252277509@qq.com");
             unit.setTelephone("");
             unit.setHasChildren(false);
             unit.setParentId("");
-            unit.setWebsite("https://wizzer.cn");
+            unit.setWebsite("https://www.baidu.com");
             Sys_unit dbunit = dao.insert(unit);
             //初始化菜单
             List<Sys_menu> menuList = new ArrayList<Sys_menu>();

@@ -7,6 +7,7 @@ import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
+import org.nutz.mvc.Mvcs;
 import org.nutz.mvc.annotation.Modules;
 
 /**
@@ -28,7 +29,7 @@ public class WebApiMainLauncher {
     }
 
     public void init() {
-
+        Mvcs.X_POWERED_BY = "express";
     }
 
     public void depose() {
