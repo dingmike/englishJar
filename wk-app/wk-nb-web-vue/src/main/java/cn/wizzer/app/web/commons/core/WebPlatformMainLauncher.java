@@ -55,7 +55,7 @@ public class WebPlatformMainLauncher {
     }
 
     public void init() {
-        Mvcs.X_POWERED_BY = "node";
+        Mvcs.X_POWERED_BY = "express";
         //注册自定义标签
         groupTemplate.registerTagFactory("cms_channel_list", () -> ioc.get(CmsChannelListTag.class));
         groupTemplate.registerTagFactory("cms_channel", () -> ioc.get(CmsChannelTag.class));

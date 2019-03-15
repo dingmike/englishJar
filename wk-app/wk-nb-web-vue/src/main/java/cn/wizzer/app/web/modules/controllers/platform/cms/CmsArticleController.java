@@ -129,7 +129,7 @@ public class CmsArticleController {
     @Ok("json")
     @RequiresPermissions("cms.content.article.add")
     @SLog(tag = "添加文章", msg = "文章标题:${args[1].title}")
-    @AdaptBy(type = WhaleAdaptor.class)
+    @AdaptBy(type = WhaleAdaptor.class) //如果你什么也不写@AdaptBy，Nutz.Mvc 会采用 org.nutz.mvc.adaptor.PairAdaptor （也就是名值对的方式） 来适配你的 HTTP 参数。
     public Object addDo(String siteid, @Param("..") Cms_article article, @Param("time_param") long[] time, HttpServletRequest req) {
         try {
             article.setPublishAt(time[0] / 1000);

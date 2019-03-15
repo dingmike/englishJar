@@ -175,9 +175,9 @@
             </li><!--# }#-->
             <!--# if(@shiro.hasRole("wizzer")){#-->
             <!--项目开发请删除-->
-            <li>
+           <!-- <li>
                 <a href="${base}/platform/sys/test" data-pjax>捐赠管理</a>
-            </li>
+            </li>-->
             <!--# }#-->
             <!--<li>
                 <a href="https://wizzer.cn/donation" target="_blank">捐赠清单</a>
@@ -419,11 +419,11 @@
                     if (parseInt("${@shiro.getPrincipalProperty('loginCount')}") > 0 || !${@config.getOrDefault("WebNotification",true)})
                         return;
                     Push.create('Thank You!', {
-                        body: '欢迎选用 NutzWk!',
+                        body: 'Welcome!',
                         icon: base + '/assets/platform/img/notice.png',
                         timeout: 5000,
                         onClick: function () {
-                            window.open("https://wizzer.cn"); //just added the window.open to a OnClick event.
+                            window.open("https://www.baidu.com"); //just added the window.open to a OnClick event.
                             this.close();
                         },
                         vibrate: [100, 100, 100]

@@ -43,7 +43,7 @@ public class CmsSiteController {
             site = new Cms_site();
             site.setId("site");
             site.setSite_name("Demo");
-            site.setSite_domain("https://wizzer.cn");
+            site.setSite_domain("https://www.baidu.com");
             cmsSiteService.insert(site);
         }
         return site;

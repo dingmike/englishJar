@@ -30,8 +30,13 @@ public class Globals {
     public static String AppShrotName = "NutzWk";
     //项目域名
     public static String AppDomain = "http://127.0.0.1";
+<<<<<<< HEAD
     //文件访问域名
     public static String AppFileDomain = "";
+=======
+    //文件上传路径
+    public static String AppUploadPath = "E://files/upload";
+>>>>>>> 2ca5af56761d6ba276f224d05435c628b6102fa0
     //文件上传路径
     public static String AppUploadBase = "/upload";
     //系统自定义参数
