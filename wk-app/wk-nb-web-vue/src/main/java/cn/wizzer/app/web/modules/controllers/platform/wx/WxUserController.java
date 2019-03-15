@@ -88,7 +88,6 @@ public class WxUserController {
     public Object down(String wxid, HttpServletRequest req) {
         try {
             WxApi2 wxApi2 = wxService.getWxApi2(wxid);
-            System.out.println("wxid:========= :" + wxid);
             wxApi2.user_get(new Each<String>() {
                 public void invoke(int index, String _ele, int length)
                         throws ExitLoop, ContinueLoop, LoopException {

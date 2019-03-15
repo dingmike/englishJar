@@ -369,7 +369,7 @@ public class WxMenuController {
             wxMenuService.execute(Sqls.create("update wx_menu set location=0 where wxid=@wxid").setParam("wxid", wxid));
             for (String s : menuIds) {
                 if (!Strings.isBlank(s)) {
-                    wxMenuService.update(org.nutz.dao.Chain.make("location", i), Cnd.where("id", "=", s));
+                    wxMenuService.update(Chain.make("location", i), Cnd.where("id", "=", s));
                     i++;
                 }
             }

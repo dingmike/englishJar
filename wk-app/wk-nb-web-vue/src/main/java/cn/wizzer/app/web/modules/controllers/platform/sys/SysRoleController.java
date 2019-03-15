@@ -163,7 +163,7 @@ public class SysRoleController {
     public Object enable(String roleId, HttpServletRequest req) {
         try {
             Sys_role role = sysRoleService.fetch(roleId);
-            sysRoleService.update(org.nutz.dao.Chain.make("disabled", false), Cnd.where("id", "=", roleId));
+            sysRoleService.update(Chain.make("disabled", false), Cnd.where("id", "=", roleId));
             sysRoleService.clearCache();
             sysUserService.clearCache();
             req.setAttribute("name", role.getName());
@@ -180,7 +180,7 @@ public class SysRoleController {
     public Object disable(String roleId, HttpServletRequest req) {
         try {
             Sys_role role = sysRoleService.fetch(roleId);
-            sysRoleService.update(org.nutz.dao.Chain.make("disabled", true), Cnd.where("id", "=", roleId));
+            sysRoleService.update(Chain.make("disabled", true), Cnd.where("id", "=", roleId));
             sysRoleService.clearCache();
             sysUserService.clearCache();
             req.setAttribute("name", role.getName());
@@ -450,7 +450,7 @@ public class SysRoleController {
         try {
             String[] ids = StringUtils.split(users, ",");
             for (String s : ids) {
-                sysRoleService.insert("sys_user_role", org.nutz.dao.Chain.make("roleId", roleId).add("userId", s));
+                sysRoleService.insert("sys_user_role", Chain.make("roleId", roleId).add("userId", s));
             }
             Sys_role role = sysRoleService.fetch(roleId);
             sysRoleService.clearCache();

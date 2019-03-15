@@ -39,10 +39,12 @@
         <dependency>
             <groupId>org.nutz</groupId>
             <artifactId>nutzboot-core</artifactId>
+            <version>${nutzboot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.nutz</groupId>
             <artifactId>nutzboot-starter-dubbo</artifactId>
+            <version>${nutzboot.version}</version>
         </dependency>
         <dependency>
             <groupId>com.101tec</groupId>
